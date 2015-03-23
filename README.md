@@ -3,12 +3,27 @@ js.js
 
 A **very simple** [Microsoft WSH](http://en.wikipedia.org/wiki/Windows_Script_Host) based ECMAScript (aka JScript [\[MSDN\]](https://msdn.microsoft.com/library/hbxc2t98%28vs.85%29.aspx) [\[WP\]](http://en.wikipedia.org/wiki/JScript)) console.
 
+It is so simple that you don't even need to make a clone to your local environment. Take a read, memorize, and write your own when you need it.
+
+Why and When
+------------
+
+Because the powerful script host engine, WSH, does not provide an interactive console. **`js.js`** uses `eval` to translate the power of WSH to an interactive console.
+
+You can do instantly; e.g.
+* make an advanced calculator, using `Math` object and operators;
+* process text file, using `RegExp` object;
+* surf the Web;
+* or anything using ECMAScript and the internal of Windows operating system plus COM applications, using `WScript` object and COM objects via `WScript.CreateObject`.
+
+It's especially helpful when you can't download/install/build/run executables.
+
 How to use
 ----------
 
 `> `**`js`**. So easy!
 
-If you have no administrative rights, don't care about the requisite below. Type `> cscript -nologo `**`js.js`**. 
+If you have no administrative rights, don't care about the requisite below. Type `> cscript -nologo `**`js.js`** instead.
 
 Requisite
 ---------
@@ -18,11 +33,6 @@ JScript files (`.js`) should run with `cscript.exe`. It means,
 
 When `cscript.exe` is used, `-nologo` is recommended.
 * `[HKCR\JSFile\Shell\Open2\Command]\@ = "C:\Windows\System32\CScript.exe `**`-nologo`**` "%1" %*"`
-
-When it helps
--------------
-
-It's helpful when you need an advanced calculator or something that you can't download or install the executables, and in case you can write a program with ECMAScript.
 
 Attention
 ---------
