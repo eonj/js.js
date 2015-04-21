@@ -1,6 +1,8 @@
 js.js
 =====
 
+**tl;dr**: a REPL code.
+
 A **very simple** [Microsoft WSH](http://en.wikipedia.org/wiki/Windows_Script_Host) based ECMAScript (aka JScript [\[MSDN\]](https://msdn.microsoft.com/library/hbxc2t98%28vs.85%29.aspx) [\[WP\]](http://en.wikipedia.org/wiki/JScript)) console.
 
 It is so simple that you don't even need to make a clone to your local environment. Take a read, memorize, and write your own when you need it.
@@ -8,9 +10,9 @@ It is so simple that you don't even need to make a clone to your local environme
 Why and When
 ------------
 
-Because the powerful script host engine, WSH, does not provide an interactive console. **`js.js`** uses `eval` to translate the power of WSH to an interactive console.
+Because the powerful script host engine, WSH, does not provide an interactive console, namely [REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop). **`js.js`** uses the built-in `eval()` to translate the power of WSH to an interactive console.
 
-You can do instantly; e.g.
+So you can do instantly; e.g.
 * make an advanced calculator, using `Math` object and operators;
 * process text file, using `RegExp` object;
 * surf the Web;
