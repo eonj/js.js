@@ -1,11 +1,17 @@
-var FV0IEh__qo76togShNc4ExIPkaagButmM17zwtGKNmh7Wjf$7lyJl$g7WGFuC0L = (function(o) {
+(new Function( // reconstructed repl routine
+
+(function($_$) { // lexical closure
+
+return (function() { // internal repl routine
+
+var $ToString$ = (function(o) {
 	var result = "";
 	if (o instanceof Array) {
 		for (var i = 0; i < o.length; i++) {
 			if (result.length) {
 				result += ",";
 			}
-			result += FV0IEh__qo76togShNc4ExIPkaagButmM17zwtGKNmh7Wjf$7lyJl$g7WGFuC0L(o[i]);
+			result += $ToString$(o[i]);
 		}
 		result = "[" + result + "]";
 	} else if (typeof o == "object") {
@@ -13,7 +19,7 @@ var FV0IEh__qo76togShNc4ExIPkaagButmM17zwtGKNmh7Wjf$7lyJl$g7WGFuC0L = (function(
 			if (result.length) {
 				result += ",";
 			}
-			result += "\"" + i + "\":" + FV0IEh__qo76togShNc4ExIPkaagButmM17zwtGKNmh7Wjf$7lyJl$g7WGFuC0L(o[i]);
+			result += "\"" + i + "\":" + $ToString$(o[i]);
 		}
 		result = "{" + result + "}";
 	} else if (typeof o == "string") {
@@ -28,19 +34,40 @@ var FV0IEh__qo76togShNc4ExIPkaagButmM17zwtGKNmh7Wjf$7lyJl$g7WGFuC0L = (function(
 });
 
 while (true) {
-	var NHqK6i6xWR$pT25xXVV6K2xzFEOcDGHTz7lwJy_Y9ymbIjETcWxli$sPxAuJ_uS;
+	var $Line$;
 	WScript.StdOut.Write(":> ");
 	try {
-		NHqK6i6xWR$pT25xXVV6K2xzFEOcDGHTz7lwJy_Y9ymbIjETcWxli$sPxAuJ_uS = WScript.StdIn.ReadLine();
+		$Line$ = WScript.StdIn.ReadLine();
 	} catch (e) {
 		WScript.Echo("Read Error " + e.message);
 		continue;
 	}
 	WScript.StdOut.Write("<: ");
 	try {
-		WScript.Echo(FV0IEh__qo76togShNc4ExIPkaagButmM17zwtGKNmh7Wjf$7lyJl$g7WGFuC0L(eval(NHqK6i6xWR$pT25xXVV6K2xzFEOcDGHTz7lwJy_Y9ymbIjETcWxli$sPxAuJ_uS)));
+		WScript.Echo($ToString$(eval($Line$)));
 	} catch (e) {
 		WScript.Echo("Eval Error " + e.message);
 		continue;
 	}
 }
+
+}) // end of internal repl routine
+.toString()
+.replace(/\$ToString\$/g, $_$())
+.replace(/\$Line\$/g, $_$())
++ "()"
+;
+
+})( // invoking lexical closure with arguments
+
+$_$ = (function() {
+	var pool = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_"
+	var res = "$";
+	while (res.length < 15)
+		res += pool.charAt(Math.floor(Math.random() * 63));
+	return res;
+})
+
+) // end of lexical closure
+
+))(); // end of reconstructed repl routine, invoked here
